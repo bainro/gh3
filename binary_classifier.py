@@ -25,7 +25,6 @@ def plotImages(images_arr):
 print(tf.__version__) # 2.X.X
 
 """The dataset has the following directory structure:
-
 cats_and_dogs_filtered</b>
 |__ train
     |______ cats: [cat.0.jpg, cat.1.jpg, cat.2.jpg ....]
@@ -181,11 +180,9 @@ else:
 # print(predictions)
 # print(train_data_gen[0][0].shape)
 
-# used to see how fast inference of ~400x300px inputs w/ batch size 5 took. ~200 FPS
+# used to see how long inference takes
 for i in range(200):
-    # Pick a random sample
     x, y = train_data_gen.next()
-    # Record the prediction time 10x and then take the average
     start = time.time()
     y_pred = model(x)
     end = time.time()
