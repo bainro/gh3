@@ -121,7 +121,7 @@ if os.path.isdir(save_file):
         converter.optimizations = [tf.lite.Optimize.DEFAULT]
         # tflite quantized model
         model = converter.convert()
-        model.save(save_file)
+        #model.save(save_file)
 else:
     print("initializing model")
 
